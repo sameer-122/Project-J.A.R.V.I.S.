@@ -1,3 +1,28 @@
+To make github directory and push for first time
+
+git config --global user.name  <username>
+git config --global user.email <youremail@example.com>
+
+1. cd <path of directory>   or navigate to directory right click open gitbash here
+2.  touch .gitignore
+3.  git init
+4.  git add .
+5.  git commit -m "Initial Commit"
+6.  git status    # Just to see
+
+7. Add key to github account if not added
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    cat <path to id_ed25519.pub>                                # Add this key to your GitHub account
+
+    Checking for existing SSH key
+    $ ls -al ~/.ssh             # Lists the files in your .ssh directory, if they exist
+    check for id_ed25519.pub    # If there is no .pub file then key doesnt exist generate new
+
+8.  git remote add orign <ssh url.git of that repo>
+9.  git push origin master
+
+
+
 To push any changes made in local to remote github .
 
 1. git add .
