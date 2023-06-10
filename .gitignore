@@ -1,3 +1,6 @@
 __pycache__/
 protocol.txt
 *.log
+.idea/
+/shelf/
+/workspace.xml

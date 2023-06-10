@@ -81,8 +81,8 @@ def fuzzmatch(desired_phrase, query):
 
 
 if __name__ == "__main__":
-    wishme()   
-                    # speak("Worship the creator, Not the creation")
+    # wishme()   
+                   # speak("Worship the creator, Not the creation")
     while True:
 
         query = takeCommand()
