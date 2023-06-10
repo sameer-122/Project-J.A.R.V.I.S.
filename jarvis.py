@@ -1,4 +1,4 @@
-ijofrom turtle import goto
+from turtle import goto
 import pyttsx3
 import datetime
 import speech_recognition as sr
@@ -54,11 +54,6 @@ def takeCommand():
         query = r.recognize_google(audio, language='en-in')      # converts audio to string
         print(f'User said: {query}')
         query = query.lower()
-        
-        if fuzzmatch('quit',query):
-            print('Quitting')
-            speak('Quitting')
-            exit()
 
     except Exception as e:
         # print(e)
@@ -155,7 +150,7 @@ if __name__ == "__main__":
                 speak('Sir, The receiver of this mail is not present in the email directory. Please update the directory, or mention it again')
                 act()
                 return
-            
+                       
             try:
                 speak('What should I say')
                 content = takeCommand()
@@ -165,6 +160,11 @@ if __name__ == "__main__":
             except Exception as e:
                 print(e)
                 speak('Sorry, I am not able to send this email, there is some technical glitch!')
+
+        elif fuzzmatch('quit',query):
+            print('Quitting')
+            speak('Quitting')
+            exit()
 
         else:
             speak('I didn\'t get you, Can you come again')
