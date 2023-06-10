@@ -81,10 +81,10 @@ def fuzzmatch(desired_phrase, query):
 
 
 if __name__ == "__main__":
-    wishme()                   # speak("Worship the creator, Not the creation")
-    # while True:
+    wishme()   
+                    # speak("Worship the creator, Not the creation")
+    while True:
 
-    def act():
         query = takeCommand()
         q = query
         # Logic for executing task based on query
@@ -148,8 +148,7 @@ if __name__ == "__main__":
 
             if to == 'none':
                 speak('Sir, The receiver of this mail is not present in the email directory. Please update the directory, or mention it again')
-                act()
-                return
+                continue
                        
             try:
                 speak('What should I say')
@@ -168,9 +167,9 @@ if __name__ == "__main__":
 
         else:
             speak('I didn\'t get you, Can you come again')
-            act()
-        act()
-    act()       
+            
+        
+          
 
 
   
