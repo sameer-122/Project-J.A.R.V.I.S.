@@ -180,9 +180,11 @@ if __name__ == "__main__":
 
         sites = [['youtube', 'youtube.com'], ['google', 'google.com'], ['stack overflow', 'stackoverflow.com'],
                  ['wikipedia', 'wikipedia.org']]
+        chromePath = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
         for site in sites:
             if f"open {site[0]}" in query:
-                webbrowser.open(site[1])
+                subprocess.call([chromePath,site[1]])
+                # webbrowser.open(site[1])
                 speak(f"Opening {site[0]}")
 
         # todo : Add a feature to play every song if specified by name
