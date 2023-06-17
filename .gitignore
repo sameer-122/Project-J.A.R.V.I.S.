@@ -4,3 +4,7 @@ protocol.txt
 .idea/
 /shelf/
 /workspace.xml
+config.py
+Openai/
+CV/
+sms_k.py
