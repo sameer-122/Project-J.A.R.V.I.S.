@@ -5,8 +5,8 @@ git config --global user.email <youremail@example.com>
 
 1.  cd <path of directory>   or navigate to directory right click open gitbash here
 2.  touch .gitignore
-3.  git init
-4.  git add .
+3.  git init    (initialise git repository, creates .git folder)
+4.  git add .   (It stages all changes in the current directory. By staging changes, you are explicitly selecting which modification you want to include. )
 5.  git commit -m "Initial Commit"
 6.  git status    # Just to see
 
