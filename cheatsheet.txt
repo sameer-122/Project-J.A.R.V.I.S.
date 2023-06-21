@@ -19,7 +19,7 @@ git config --global user.email <youremail@example.com>
     $ ls -al ~/.ssh             # Lists the files in your .ssh directory, if they exist
     check for id_ed25519.pub    # If there is no .pub file then key doesnt exist generate new
 
-8.  git remote add orign <ssh url.git of that repo>
+8.  git remote add origin <ssh url.git of that repo>
 9.  git push origin master
 
 
