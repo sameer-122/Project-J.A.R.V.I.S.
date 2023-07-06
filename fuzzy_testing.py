@@ -11,15 +11,15 @@ def fuzzmatch(desired_phrase, query, cutoff_ratio=60):
         phrase= q[i:i+ln]
         similarity_ratio = fuzz.ratio(desired_phrase,phrase)
         max_ratio = max(max_ratio, similarity_ratio)
-        if similarity_ratio > cutoff_ratio:
+        if similarity_ratio >= cutoff_ratio:
             print(f'fuzmatch passed: {similarity_ratio}')
             return True
 
 
 if __name__ == '__main__' :
-    query = 'using Iw'
+    query = 'quwit'
     query.lower()
-    phrase = 'using a i'
-    if 'using a i' in query or fuzzmatch('using a i',query,cutoff_ratio=75) :
+    phrase = 'quit'
+    if 'using a i' in query or fuzzmatch(phrase,query,cutoff_ratio=75) :
         print('exitting')
         exit()

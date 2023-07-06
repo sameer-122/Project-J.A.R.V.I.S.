@@ -1,0 +1,26 @@
+OpenAI response for prompt: ok write a write a code to face match in python 
+ ******************************** 
+
+
+
+#import the necessary libraries
+import cv2
+import face_recognition
+
+# Load the jpg file into a numpy array and set up image
+image = cv2.imread("image.jpg")
+image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Get the face encodings for this image 
+face_locations = face_recognition.face_locations(image_rgb) 
+face_encodings = face_recognition.face_encodings(image_rgb, face_locations)
+
+# Iterate through each face in this image
+for face_encoding in face_encodings:
+
+    # See if the face is a match for the known face (wikipedia jpg)
+    matches = face_recognition.compare_faces(known_face_encoding, face_encoding, tolerance=0.5)
+
+    # If a match was found in known_face_encodings, just use the first one.
+    if True in matches:
+        first_match_index = matches.index(
